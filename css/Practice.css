@@ -1,0 +1,27 @@
+.flexContainer {
+    background-color: rgb(28, 186, 239);
+    height: 20vh;
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.flexItem {
+    background-color: blue;
+    height: 100px;
+    width:24%;
+    /* margin: 5px; */
+    gap: 2px;
+}
+
+.flexItem:first-child {
+    background-color: rgb(238, 227, 247);
+}
+
+.flexItem:nth-child(3) {
+    background-color: antiquewhite;
+
+}

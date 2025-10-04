@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: web-loadbalancer
+spec:
+  type: LoadBalancer
+  selector:
+    app: web     # must match pod/deployment label
+  ports:
+    - port: 80         # service port (LB listens here)
+      targetPort: 80   # container por
+      nodePort: 30007

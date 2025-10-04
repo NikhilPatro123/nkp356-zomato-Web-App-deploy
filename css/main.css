@@ -1,0 +1,705 @@
+:root {
+    --base-textcolor: rgb(105, 105, 105)
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'); */
+
+@font-face {
+    src: url(../assests/fonts/Roboto/Roboto-Regular.ttf);
+    font-family: robotoTestYantra;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: robotoTestYantra;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: var(--base-textcolor);
+}
+
+/* Nav Bar*/
+
+
+.navContainer {
+    height: 70px;
+    /* background-color: rgb(222, 18, 58); */
+    width: 100%;
+
+}
+
+.innerNavContainer .hamburger {
+    display: none;
+}
+
+.innerNavContainer {
+    height: inherit;
+    width: 90%;
+    /* background-color: antiquewhite; */
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.innerNavContainer .logo {
+    width: 10%;
+
+}
+
+.search {
+    display: flex;
+    width: 60%;
+    /* background-color: rgb(232, 245, 245) ; */
+    justify-content: space-around;
+    padding: 10px;
+    padding-right: 5px;
+    height: 50px;
+    color: var(--base-textcolor);
+    box-shadow: 2px 3px 7px grey;
+    opacity: 0.7;
+    border-radius: 10px;
+
+}
+
+.authentication {
+    display: flex;
+    width: 20%;
+    /* background-color: white; */
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.search .location {
+    /* border: 1px solid grey; */
+    width: 30%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    color: red;
+    /* border-right: 2px solid grey; */
+}
+
+.search .menu {
+    /* border: 1px solid grey; */
+    width: 70%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-left: 10px;
+    gap: 10px;
+}
+
+.search .arrow {
+    border-right: 1.5px solid rgb(105, 105, 105);
+    width: 20%;
+    /* background-color: rgb(237, 226, 248); */
+    height: 20px;
+    padding-right: 11px;
+    margin-left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+input {
+    width: 100%;
+    outline: none;
+    border: none;
+}
+
+@media (max-width:500px) {
+    .innerNavContainer {
+        justify-content: space-between;
+    }
+
+    .logo {
+        width: 50%;
+    }
+
+    .search,
+    .authentication {
+        display: none;
+    }
+
+    .innerNavContainer .hamburger {
+        display: block;
+    }
+
+}
+
+/* Sub-Nav Bar*/
+
+
+.subNavContainer {
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    position: sticky;
+    z-index: 4;
+    top: 0px;
+    display: flex;
+    border-bottom: 2px solid rgba(245, 245, 245, 0.9);
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.subNavItem {
+    width: 85%;
+    height: inherit;
+    /* background-color: beige; */
+    display: flex;
+    gap: 2.6rem;
+    margin: auto;
+    font-size: 1.12rem;
+}
+
+.Logo {
+    width: 2.3rem;
+    height: 2.3rem;
+    /* background: var(--base-textcolor); */
+    border-radius: 50%;
+
+}
+
+.Sections {
+    /* border: 1px solid black; */
+    display: flex;
+    font-size: 1.5rem;
+    align-items: center;
+    padding: 2px;
+    opacity: 0.8;
+    gap: 1rem;
+}
+
+.Sections .logoBg {
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(197, 228, 240);
+    border-radius: 50%;
+}
+
+.Sections:hover {
+    color: red;
+    border-bottom: 2px solid red;
+    opacity: 1;
+
+}
+
+.collectionsContainer {
+    width: 100%;
+
+}
+
+@media (max-width: 500px) {
+    .subNavContainer .subNavItem {
+        flex-direction: column;
+
+    }
+
+    .subNavContainer {
+        position: static;
+        height: fit-content;
+    }
+}
+
+/* Collections*/
+
+.firstSection {
+    background-color: rgb(245, 245, 245);
+    width: 100%;
+    padding: 1rem;
+    /* height: 30vh; */
+
+}
+
+.innerFirstSection {
+    /* background-color: blanchedalmond; */
+    width: 89%;
+    margin: auto;
+    /* padding: auto; */
+}
+
+.innerFirstSection .subCollections {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.innerFirstSection h1 {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+
+.innerFirstSection section {
+    display: flex;
+    justify-content: space-between;
+    /* padding: 2px; */
+    color: grey;
+}
+
+.subCollections p a {
+    color: red;
+    opacity: 0.3;
+}
+
+.subCollections p a:hover {
+    opacity: 0.8;
+}
+
+.cardSection {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    width: 92%;
+    margin: auto;
+    column-gap: 0.5rem;
+}
+
+.cardSection .cardBody {
+    width: 90%;
+    height: 24rem;
+    border-radius: 0.5rem;
+    background-color: aquamarine;
+    margin: 20px;
+}
+
+.cardSection .cardBody:first-child {
+    background-image: url(../assests/images/red-wine-2443699_1280.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.cardBody section {
+    color: white;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    letter-spacing: 1px;
+    margin-left: 20px;
+}
+
+.cardSection .cardBody:nth-child(2) {
+    background-image: url(../assests/images/castle-195105_1280.jpg);
+    background-size: cover;
+}
+
+.cardSection .cardBody:nth-child(3) {
+    background-image: url(../assests/images/restaurant-563127_1280.jpg);
+    background-size: cover;
+}
+
+.cardSection .cardBody:last-child {
+    background-image: url(../assests/images/amsterdam-2034650_1280.jpg);
+    background-size: cover;
+}
+
+/* Filter Section */
+
+
+.filterSection {
+    width: 100%;
+    /* background-color: white; */
+    /* border: 2px solid black; */
+    /* display: flex;
+    flex-direction: column; */
+    /* margin: auto; */
+    padding: 2rem;
+}
+
+.subFilterSection {
+    width: 100%;
+    /* border: 2px solid red; */
+    height: 5rem;
+    display: flex;
+    margin: auto;
+    position: sticky;
+    z-index: 40;
+    top: 0px;
+    background-color: white;
+}
+
+.subFilterSection section {
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-left: 4rem;
+}
+
+.btn {
+    border-radius: 10px;
+    height: 2rem;
+    padding: 0.8rem;
+    border: 0.5px solid;
+    opacity: 0.6;
+    align-items: center;
+    display: flex;
+    /* gap: 0.5rem; */
+    color: rgb(97, 96, 96);
+    margin-left: 1rem;
+}
+
+.btn:hover {
+    opacity: 1;
+
+}
+
+.btn img {
+    width: 1.2rem;
+}
+
+.filterCover .bgImage {
+    width: 96%;
+    height: 18rem;
+    /* border: 2px solid black; */
+    background-image: url(../assests/images/platter.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: auto;
+    border-radius: 15px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 2rem;
+    margin-left: 2.7rem;
+}
+
+.section2 {
+    width: 90%;
+    height: 18rem;
+    /* display: flex; */
+    margin: auto;
+    padding: 4px;
+}
+
+.content3 {
+    font-size: 1.7rem;
+}
+
+.cardContainer {
+    border: 2px solid black;
+    width: 100%;
+    height: 35rem;
+    /* display: grid; */
+    padding: 2rem;
+    margin: auto;
+}
+
+.subCardContainer {
+    /* border: 2px solid rgb(215, 32, 32); */
+    height: 15rem;
+
+}
+
+.cards {
+    /* background-color: aquamarine; */
+    height: 6rem;
+    grid-template-columns: 33% 33% 33%;
+    column-gap: 2%;
+}
+
+.cardSection1 {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    width: 92%;
+    margin: auto;
+    column-gap: 1px;
+}
+
+.cardSection1 .cardBody1 {
+    width: 97%;
+    height: 21rem;
+    border-radius: 0.5rem;
+    /* background-color: aquamarine; */
+    margin: 1rem 0;
+}
+
+.cardBody1 .subCardBody1 {
+    /* border: 1px solid black; */
+    background-color: white;
+    /* padding:10px; */
+    margin: auto;
+    border-radius: 15px;
+}
+
+.subCardBody1 figure {
+    margin: auto;
+    width: 93%;
+    margin-top: 10px;
+}
+
+figure img {
+    border-radius: 15px;
+}
+
+figcaption .restaurantName {
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.restaurantName .rating {
+    height: fit-content;
+    background-color: rgb(47, 153, 47);
+    width: 20%;
+    display: flex;
+    /* border: 2px solid black; */
+    justify-content: space-around;
+    border-radius: 5px;
+    color: white;
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+figure figcaption h1 {
+    font-size: 20px;
+    font-weight: 100px;
+    /* opacity: 0.6; */
+}
+
+figure figcaption {
+
+    word-spacing: 2px;
+    line-height: 25px;
+}
+
+figcaption .description {
+    opacity: 0.6;
+}
+
+.description p:last-child {
+    color: red;
+}
+
+.cardBody1 .subCardBody1:hover {
+    border: 1px solid gainsboro;
+    box-shadow: 5px 5px 15px rgb(154, 153, 153);
+}
+
+.firstSection1 {
+    background-color: rgba(255, 255, 255, 0.934);
+    width: 100%;
+    padding: 1rem;
+
+}
+
+.innerFirstSection1 {
+    width: 92%;
+    margin: auto;
+}
+
+.innerFirstSection1 h1 {
+    font-size: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* Footer */
+.footerContainer {
+    width: 100%;
+    /* border: 2px solid black; */
+    height: 28rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #F8F8F8;
+}
+
+.subFooterContainer {
+    width: 90%;
+    height: 5rem;
+    /* border: 2px solid brown; */
+    margin: auto;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.subFooterContainer img {
+    width: 10%;
+    height: 2rem;
+
+}
+
+.subFooterContainer .btnItems {
+    display: flex;
+    /* margin: 2rem; */
+    justify-content: end;
+    gap: 1.5rem;
+
+}
+
+.btnItems .btn1 {
+    width: 70%;
+    color: black;
+    border-radius: 10px;
+    height: 2rem;
+    padding: 0.8rem;
+    border: 0.5px solid grey;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 0.2rem;
+    display: flex;
+    font-size: 1.2rem;
+}
+
+.btn1 img {
+    width: 50%;
+    height: 15px;
+}
+
+.footerItemContainer {
+    width: 90%;
+    /* border: 2px solid black; */
+    margin: auto;
+    height: 23rem;
+    display: grid;
+    grid-template-columns: 18% 18% 18% 18% 18%;
+    column-gap: 2%;
+}
+
+.footerItem p {
+    /* border: 2px solid green; */
+    letter-spacing: 0.2rem;
+}
+
+.footerItem ul {
+    margin-top: 1rem;
+    list-style-type: none;
+    color: rgb(170, 167, 167);
+    line-height: 1.4rem;
+}
+
+.footerItem .links {
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: start;
+    gap: 1rem;
+    margin-top: 1rem;
+    list-style-type: none;
+}
+
+.links .li {
+    font-size: 5rem;
+    border-radius: 50%;
+}
+
+.copyright {
+    width: 90%;
+    margin: auto;
+    /* border: 2px solid purple; */
+    height: 6rem;
+    margin-top: 2rem;
+    border-top: 2px solid grey;
+}
+
+.copyright p {
+    /* margin: auto; */
+    margin-top: 1.5rem;
+    color: var(--base-textcolor);
+    margin-bottom: 4rem;
+    font-size: 1rem;
+}
+
+.footerItem .appStore {
+    margin-top: 0.4rem;
+
+}
+
+.appStore img {
+    height: 40px;
+    width: 140px;
+}
+
+/* Collections 2 */
+
+.popularLocalitiesContainer {
+    width: 100%;
+    height: 25rem;
+    margin:auto;
+    /* border: 2px solid black; */
+}
+
+.popularLocalitiesContainer .statement{
+    width: 87%;
+    margin: auto;
+    /* border: 2px solid black; */
+    font-size: 2rem;
+    font-weight: 0;
+    margin-bottom: 2rem;
+    margin-top: 2.5rem;
+
+}
+
+.localitiesItemContainer {
+    width: 91%;
+    /* border: 2px solid brown; */
+    height: 19rem;
+    margin: auto;
+    margin-top: 0.4rem;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    column-gap: 3%;
+    row-gap: 2%;
+    justify-content: center;
+    align-items: center;
+}
+
+.localitiesItem {
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+    border: 2px solid rgb(240, 237, 237);
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    border-radius: 10px;
+    justify-content: start;
+    
+}
+
+.localitiesItem:hover {
+    border: 1px solid gainsboro;
+    box-shadow: 0px 5px 15px rgb(154, 153, 153);
+}
+
+.localitiesItem .referenceAddress{
+    display: block;
+    justify-content: center; 
+    align-items: center;
+    /* border: 2px solid orangered; */
+    width: 80%;
+    margin-left: 1rem;
+    /* height: 3rem; */
+}
+
+.localitiesItem .referenceAddress p{
+    font-size: 1.13rem;
+    opacity: 0.7;
+    letter-spacing: 0.08rem;
+}
+
+.localitiesItem .referenceAddress p:last-child{
+    letter-spacing: 0.05rem;
+    color: var(--base-textcolor);
+}
+
